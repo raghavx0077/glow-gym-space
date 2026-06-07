@@ -1,29 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Landing from "@/components/Landing";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Ironforge — Premium Strength & Performance Gym" },
+      { name: "description", content: "Elite coaching, science-backed programs, and a community built to push your limits. Join Ironforge." },
+      { property: "og:title", content: "Ironforge — Premium Strength & Performance Gym" },
+      { property: "og:description", content: "Elite coaching, science-backed programs, and a community built to push your limits." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Landing />
+      <Toaster />
+    </>
   );
 }
